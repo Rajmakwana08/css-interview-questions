@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Position Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Toggle Button -->
+  <button class="mode-toggle" onclick="toggleMode()">Toggle Dark/Light</button>
+
+  <h2>Positioning Demo</h2>
+
+  <div class="relative-box">Relative</div>
+  <div class="absolute-box">Absolute</div>
+  <div class="fixed-box">Fixed</div>
+
+  <div class="spacer"></div>
+
+  <div class="sticky-box">Sticky</div>
+
+  <div style="position: absolute; z-index: 3; background: rgb(115, 255, 0); width: 170px; height: 100px; bottom: 520px; left: 150px;"></div>
+  <div style="position: absolute; z-index: 3; background: red; width: 130px; height: 100px; bottom: 520px; left: 200px;"></div>
+  <div style="position: absolute; z-index: 1; background: rgb(255, 200, 0); width: 100px; height: 100px; bottom: 520px; left: 250px;"></div>
+  <div style="position: absolute; z-index: -1; background: blue; width: 100px; height: 100px; left: 20px; top: 20px;"></div>
+
+  <hr><hr>
+
+  <div class="grid-container">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+    <div class="grid-item">Item 4</div>
+  </div>
+
+  <hr><hr>
+
+  <div class="box">Box 1</div>
+  <div class="box hidden-box">Box 2 (hidden)</div>
+  <div class="box none-box">Box 3 (none)</div>
+  <div class="box">Box 4</div>
+  <div class="box"></div>
+
+  <br>
+  <hr>
+  <div style="opacity: 0.5;">This is semi-transparent text</div>
+
+  <div style="width: 200px; height: 100px; overflow: auto; border: 1px solid black;">
+    <p>This is some long text.</p>
+    <p>This is some long text.</p>
+    <p>This is some long text.</p>
+    <p>This is some long text.</p>
+    <p>This is some long text.</p>
+  </div>
+
+  <hr>
+<h2>Viewport Units Demo</h2>
+
+<div style="height: 30vh; background: lightblue; text-align: center; line-height: 30vh; margin-bottom: 10px;">
+  30vh (30% of screen height)
+</div>
+
+<div style="width: 50vw; background: lightcoral; color: white; padding: 20px; margin-bottom: 10px;">
+  50vw (50% of screen width)
+</div>
+
+<div style="width: 20vmin; height: 20vmin; background: gold; text-align: center; line-height: 20vmin; margin-bottom: 10px;">
+  vmin
+</div>
+
+<div style="width: 20vmax; height: 20vmax; background: green; color: white; text-align: center; line-height: 20vmax;">
+  vmax
+</div>
+
+  
+
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
